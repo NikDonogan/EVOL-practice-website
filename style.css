@@ -1,10 +1,14 @@
+/* ROOT */
 @import url("https://fonts.googleapis.com/css2?family=Caudex:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 :root {
   --red1: rgb(190, 29, 29);
   --red2: rgb(85, 16, 16);
   --black1: rgba(11, 15, 13, 0.9);
+  --black2: rgba(11, 15, 13, 0.6);
   --gray1: rgb(48, 51, 51);
+  --bone1: rgb(223, 220, 188);
 }
+/* GENERAL */
 body {
   background-color: var(--gray1);
   max-width: fit-content;
@@ -16,33 +20,20 @@ body {
 div {
   box-sizing: border-box;
 }
-
-.box {
-  font-family: Caudex;
-  width: 30vh;
-  border: solid black;
-  border-width: 4px 1px 1px 4px;
-  border-radius: 0 4px 0 4px;
-  padding: 10px;
-  margin: 24px;
-  background-color: aliceblue;
-  border-color: darkgrey black black black;
-}
 h2 {
   font-family: Caudex;
   color: rgb(190, 29, 29);
   padding: 20px;
 }
-.title {
-  background-color: var(--black1);
-  position: sticky;
-  top: 119px;
-  width: 13vh;
-  min-width: fit-content;
-  padding: 10px;
-  margin-left: -1vh;
-  border-radius: 0 5px 70px 0;
+p {
+  font-family: Caudex;
+  font-size: 20px;
+  color: var(--bone1);
+  padding: 20px;
+  margin-top: -50px;
 }
+
+/* HEADING */
 .heading {
   font-family: Caudex;
   font-size: 20px;
@@ -54,6 +45,7 @@ h2 {
   padding: 0 0 0 130px;
   top: 0;
   left: 0;
+  z-index: 3;
 }
 #backhead {
   padding: 60px;
@@ -74,36 +66,6 @@ h2 {
 
   100% {
     transform: translateY(5px);
-  }
-}
-@media (max-width: 430px) {
-  .heading {
-    font-family: Caudex;
-    font-weight: 700;
-    font-size: larger;
-
-    width: 100%;
-    color: var(--red1);
-    background-color: var(--black1);
-    position: fixed;
-    padding: 0 0 0 30px;
-    top: 0;
-    left: 0;
-  }
-  #EVOL-title {
-    padding-left: 50px;
-  }
-  .box {
-    font-family: Caudex;
-    font-size: larger;
-    width: 30vh;
-    border: solid black;
-    border-width: 4px 1px 1px 4px;
-    border-radius: 0 4px 0 4px;
-    padding: 10px;
-    margin: 24px;
-    background-color: aliceblue;
-    border-color: darkgrey black black black;
   }
 }
 #heading-menu {
@@ -130,6 +92,57 @@ button {
   background-color: rgba(41, 40, 40, 0.4);
 }
 
+/* MAIN BODY */
+#main-page-body {
+  display: flex;
+}
+#updates {
+  align-items: center;
+  text-align: center;
+  background-color: var(--black2);
+  width: 50vh;
+  border-radius: 10px;
+  margin: 20px 0 0 20px;
+}
+#main-separator {
+  height: 80vh;
+  padding: 20px 3vh 0 3vh;
+}
+.protag {
+  max-height: 100vh;
+  position: absolute;
+  z-index: 1;
+}
+#game-summary {
+  text-align: left;
+  background-color: var(--black2);
+  border-radius: 10px;
+  width: fit-content;
+  position: relative;
+  z-index: 2;
+  left: 30vh;
+  top: 12vh;
+}
+#game-low-half {
+  display: flex;
+
+}
+.screenshot {
+  padding: 3vh 6vh;
+  max-width: 80vh;
+}
+#game-links {
+  margin-top: 27px;
+}
+.game-button {
+  max-width: 22vh;
+  margin-left: -5vh;
+    transition: all 300ms;
+}
+.game-button:hover {
+  mix-blend-mode: multiply;
+
+}
 #EVOL-title {
   margin-left: -20vh;
 }
@@ -140,3 +153,24 @@ button {
 #first-heading-button {
   border-width: 0 1px 0 1px;
 }
+
+
+/* PHONE MEDIA */
+@media (max-width: 430px) {
+  .heading {
+    font-family: Caudex;
+    font-weight: 700;
+    font-size: larger;
+
+    width: 100%;
+    color: var(--red1);
+    background-color: var(--black1);
+    position: fixed;
+    padding: 0 0 0 30px;
+    top: 0;
+    left: 0;
+  }
+  #EVOL-title {
+    padding-left: 50px;
+  }
+  }
