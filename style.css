@@ -2,15 +2,19 @@
 :root {
   --red1: rgb(190, 29, 29);
   --red2: rgb(85, 16, 16);
-  --black1: rgb(11, 15, 13);
+  --black1: rgba(11, 15, 13, 0.9);
   --gray1: rgb(48, 51, 51);
 }
 body {
   background-color: var(--gray1);
   max-width: fit-content;
+  background-image: url(images/bg\ \(2\).jpg);
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: soft-light;
 }
 div {
-  box-sizing: border-Sox;
+  box-sizing: border-box;
 }
 
 .box {
@@ -27,16 +31,17 @@ div {
 h2 {
   font-family: Caudex;
   color: rgb(190, 29, 29);
+  padding: 20px;
 }
 .title {
   background-color: var(--black1);
   position: sticky;
-  top: 84px;
+  top: 119px;
   width: 13vh;
   min-width: fit-content;
   padding: 10px;
-
-  border-radius: 0 70px 70px 0;
+  margin-left: -1vh;
+  border-radius: 0 5px 70px 0;
 }
 .heading {
   font-family: Caudex;
@@ -51,19 +56,17 @@ h2 {
   left: 0;
 }
 #backhead {
-  position: static;
-  margin: 0 0 7vh;
+  padding: 60px;
 }
 #logo {
   width: 100px;
   position: absolute;
-  top: 5px;
+  top: 2px;
   left: 0px;
   padding: 10px 20px 20px 10px;
   border-radius: 0 0 40px 0;
   animation: godown 2000ms infinite alternate-reverse;
 }
-
 @keyframes godown {
   0% {
     transform: translateY(-10px);
@@ -73,16 +76,6 @@ h2 {
     transform: translateY(5px);
   }
 }
-
-#logoback {
-  width: 100px;
-  position: absolute;
-  top: 5px;
-  left: 0px;
-  background-color: var(--black1);
-  padding: 65px 15px;
-  border-radius: 0 0 40px 0;
-}
 @media (max-width: 430px) {
   .heading {
     font-family: Caudex;
@@ -90,12 +83,15 @@ h2 {
     font-size: larger;
 
     width: 100%;
-    color: darkslategray;
-    background-color: var(--red1);
+    color: var(--red1);
+    background-color: var(--black1);
     position: fixed;
     padding: 0 0 0 30px;
     top: 0;
     left: 0;
+  }
+  #EVOL-title {
+    padding-left: 50px;
   }
   .box {
     font-family: Caudex;
@@ -118,7 +114,7 @@ button {
   font-family: Caudex;
   font-size: 20px;
   color: var(--red1);
-  background-color: var(--black1);
+  background-color: transparent;
 }
 .heading-button {
   padding: 5vh 0 5vh 0;
@@ -131,7 +127,7 @@ button {
   padding: 5vh 0 5vh 0;
   border: solid var(--red2);
   border-width: 0 1px 0 0;
-  background-color: rgb(41, 40, 40);
+  background-color: rgba(41, 40, 40, 0.4);
 }
 
 #EVOL-title {
