@@ -18,9 +18,6 @@ body {
   background-blend-mode: soft-light;
   cursor: url(images/cursor4.png) , auto;
 }
-/* html,script,div,body,button,a {
-  cursor: url(images/cursor4.png) , auto;
-} */
 div {
   box-sizing: border-box;
 }
