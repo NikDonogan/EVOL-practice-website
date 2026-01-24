@@ -16,7 +16,7 @@ body {
   background-size: cover;
   background-position: center;
   background-blend-mode: soft-light;
-  cursor: url(images/cursor4.png) , auto;
+  cursor: url(images/cursor4.png), auto;
 }
 div {
   box-sizing: border-box;
@@ -38,7 +38,7 @@ p {
 a {
   max-width: fit-content;
   max-height: fit-content;
-  cursor: url(images/cursor4.png) , auto;
+  cursor: url(images/cursor4.png), auto;
 }
 button {
   font-family: Caudex;
@@ -48,10 +48,10 @@ button {
   border: none;
   height: fit-content;
   width: fit-content;
-  cursor: url(images/cursor5.png) , auto;
+  cursor: url(images/cursor5.png), auto;
 }
 button:hover {
- cursor: url(images/cursor5.png) , auto;
+  cursor: url(images/cursor5.png), auto;
 }
 /* HEADING */
 .heading {
@@ -131,7 +131,7 @@ button:hover {
 .social-icon:hover {
   opacity: 1;
   box-shadow: 0 0 15px -5px gold;
-  cursor: url(images/cursor5.png) , auto;
+  cursor: url(images/cursor5.png), auto;
 }
 
 /* MAIN BODY */
@@ -164,11 +164,11 @@ button:hover {
   animation: fadeinleft 0.5s;
 }
 @keyframes fadeinleft {
-  0%{
+  0% {
     transform: translateX(500px);
     opacity: 0;
   }
-  100%{
+  100% {
     transform: translateX(0px);
     opacity: 1;
   }
@@ -181,16 +181,15 @@ button:hover {
   position: relative;
   z-index: 2;
   left: 24%;
-
 }
 .game-description {
   display: flex;
   max-width: 110vh;
 }
 .game-logo {
-width: 40vh;
-height: fit-content;
-margin-top: 5%;
+  width: 40vh;
+  height: fit-content;
+  margin-top: 5%;
 }
 .screenshot-segment {
   display: flex;
@@ -216,9 +215,15 @@ margin-top: 5%;
   padding: 10px;
   height: 140px;
 }
+.right-arrow:hover {
+  transform: translateX(10px);
+}
+.left-arrow:hover {
+  transform: translateX(-10px);
+}
 #game-links {
   display: flex;
-  justify-content:space-around;
+  justify-content: space-around;
   padding: 1% 0;
   margin-left: 12%;
 }
@@ -228,14 +233,13 @@ margin-top: 5%;
   padding: 0;
   margin: 1%;
   opacity: 0.5;
-    transition: all 100ms;
-  cursor: url(images/cursor5.png) , auto;
+  transition: all 100ms;
+  cursor: url(images/cursor5.png), auto;
 }
 .game-button:hover {
   opacity: 1;
-  cursor: url(images/cursor5.png) , auto;
+  cursor: url(images/cursor5.png), auto;
 }
-
 
 /* PHONE MEDIA */
 @media (max-width: 430px) {
@@ -255,4 +259,4 @@ margin-top: 5%;
   #EVOL-title {
     padding-left: 50px;
   }
-  }
+}

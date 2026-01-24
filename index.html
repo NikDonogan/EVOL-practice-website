@@ -4,60 +4,106 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>EVOL</title>
-    <link rel="shortcut icon" href="images/icon transparent.png" type="image/x-icon">
+    <link
+      rel="shortcut icon"
+      href="images/icon transparent.png"
+      type="image/x-icon"
+    />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <script src="main.js"></script>
     <div class="heading">
       <img src="images/icon transparent.png" id="logo" />
-      <img id="EVOL-title" src="images/EVOL.png">
+      <img id="EVOL-title" src="images/EVOL.png" />
       <div id="heading-menu">
         <div id="heading-button-menu">
-          <button id="first-heading-button" class="heading-button">GAMES</button>
+          <button id="first-heading-button" class="heading-button">
+            GAMES
+          </button>
           <button class="heading-button">ABOUT</button>
           <button class="heading-button">MERCH</button>
           <button class="heading-button">TEAM</button>
-          <a href="https://discord.gg/cXcyDHh6Pr"
-           target="_blank"><img class="social-icon" src="images/discord.png"></a>
+          <a href="https://discord.gg/cXcyDHh6Pr" target="_blank"
+            ><img class="social-icon" src="images/discord.png"
+          /></a>
         </div>
       </div>
     </div>
     <div id="backhead"></div>
+    <div id="main-page-body">
+      <div id="updates">
+        <h2>UPDATES</h2>
+        <script
+          id="bsky-feed"
+          src="https://blueskytimeline.com/timeline.js"
+          async
+          data-handle="nik-donogan.bsky.social"
+          data-theme="dark"
+          data-width="420"
+          data-height="690"
+          data-lang="en"
+          data-ui="1"
+          data-prof="2"
+          data-pin="0"
+          data-rp="1"
+          data-thread="0"
+        ></script>
+      </div>
+      <div id="separator">
+        <img id="main-separator" src="images/separator.png" />
+      </div>
+      <div id="games">
+        <img class="protag" src="images/game1.png" />
+        <div id="game-summary">
+          <div class="game-description">
+            <button>
+              <img
+                class="arrow game-arrow left-arrow"
+                src="images/left game arrow.png"
+              />
+            </button>
+            <img class="game-logo" src="images/game logo.png" />
+            <p>
+              Game Description Lorem ipsum dolor sit amet consectetur
+              adipisicing elit. Sit, ipsum nam nulla, id obcaecati cupiditate
+              quos iure harum, distinctio numquam ipsa ratione corrupti quae
+              totam praesentium. Dolorum voluptate nemo vel!
+            </p>
+            <button>
+              <img
+                class="arrow game-arrow right-arrow"
+                src="images/right game arrow.png"
+              />
+            </button>
+          </div>
+          <div class="screenshot-segment">
+            <button>
+              <img class="arrow left-arrow" src="images/left arrow.png" />
+            </button>
+            <img class="screenshot" src="images/screenshot1.jpg" />
+            <button>
+              <img class="arrow right-arrow" src="images/right arrow.png" />
+            </button>
+          </div>
+          <div id="game-links">
+            <a
+              href="https://store.steampowered.com/app/1274600/The_Last_Faith/"
+              target="_blank"
+              ><img src="images/steam.png" class="game-button"
+            /></a>
+            <a href="" target="_blank"
+              ><img class="game-button" src="images/playstation.png"
+            /></a>
+            <a href="" target="_blank"
+              ><img class="game-button" src="images/switch.png"
+            /></a>
+            <a href="" target="_blank"
+              ><img class="game-button" src="images/xbox.png"
+            /></a>
+          </div>
+        </div>
+      </div>
     </div>
-<div id="main-page-body">
-<div id="updates">
-  <h2>UPDATES</h2>
-  <script id="bsky-feed" src="https://blueskytimeline.com/timeline.js" async data-handle="nik-donogan.bsky.social" data-theme="dark" data-width="420" data-height="690" data-lang="en" data-ui="1" data-prof="2" data-pin="0" data-rp="1" data-thread="0"></script>
-</div>
-<div id="separator">
-  <img id="main-separator" src="images/separator.png">
-</div>
-<div id="games">
-  <img class="protag" src="images/game1.png">
-  <div id="game-summary">
-    <div class="game-description">
-      <button><img class="arrow game-arrow left-arrow" src="images/left game arrow.png"></button>
-    <img class="game-logo" src="images/game logo.png">
-    <p>Game Description Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-      Sit, ipsum nam nulla, id obcaecati cupiditate quos iure harum,
-      distinctio numquam ipsa ratione corrupti quae totam praesentium.
-      Dolorum voluptate nemo vel!</p>
-      <button><img class="arrow game-arrow right-arrow" src="images/right game arrow.png"></button>
-    </div>
-<div class="screenshot-segment">
-  <button><img class="arrow left-arrow" src="images/left arrow.png"></button>
-  <img class="screenshot" src="images/screenshot1.jpg">
-  <button><img class="arrow right-arrow" src="images/right arrow.png"></button>
-</div>
-<div id="game-links">
-    <a href="https://store.steampowered.com/app/1274600/The_Last_Faith/" target="_blank" ><img src="images/steam.png" class="game-button"></a>
-    <a href="" target="_blank"><img class="game-button" src="images/playstation.png"></a>
-    <a href="" target="_blank"><img class="game-button" src="images/switch.png"></a>
-    <a href="" target="_blank"><img class="game-button" src="images/xbox.png"></a>
-  </div>
-  </div>
-</div>
-</div>
   </body>
 </html>
