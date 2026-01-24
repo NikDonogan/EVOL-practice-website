@@ -17,28 +17,47 @@ body {
   background-position: center;
   background-blend-mode: soft-light;
 }
+html,script,div,body,button,a,* {
+  cursor: url(images/cursor4.png) , auto;
+}
+
 div {
   box-sizing: border-box;
 }
 h2 {
   font-family: Caudex;
-  color: rgb(190, 29, 29);
-  padding: 20px;
+  color: var(--red1);
+  padding: 1%;
+  margin: 0;
+  text-shadow: 0 0 10px black;
 }
 p {
   font-family: Caudex;
   font-size: 20px;
   color: var(--bone1);
-  padding: 20px;
-  margin-top: -50px;
+  padding: 0 20px;
+  text-shadow: 0 0 0 5px black;
 }
-
+a {
+  max-width: fit-content;
+  max-height: fit-content;
+}
+button {
+  font-family: Caudex;
+  font-size: 20px;
+  color: var(--red1);
+  background-color: transparent;
+  border: none;
+  height: fit-content;
+  width: fit-content;
+}
 /* HEADING */
 .heading {
   font-family: Caudex;
   font-size: 20px;
   font-weight: 700;
   width: 100%;
+  display: flex;
   color: var(--red1);
   background-color: var(--black1);
   position: fixed;
@@ -48,14 +67,15 @@ p {
   z-index: 3;
 }
 #backhead {
-  padding: 60px;
+  position: relative;
+  padding: 3.5%;
 }
 #logo {
-  width: 100px;
+  height: 90%;
   position: absolute;
-  top: 2px;
+  top: 0px;
   left: 0px;
-  padding: 10px 20px 20px 10px;
+  padding: 5px 20px 20px 10px;
   border-radius: 0 0 40px 0;
   animation: godown 2000ms infinite alternate-reverse;
 }
@@ -70,13 +90,21 @@ p {
 }
 #heading-menu {
   display: flex;
-  margin-left: 24vh;
+  width: fit-content;
 }
-button {
-  font-family: Caudex;
-  font-size: 20px;
-  color: var(--red1);
-  background-color: transparent;
+#EVOL-title {
+  margin: 0.8% 0 0 0;
+  width: 15%;
+  height: 15%;
+  opacity: 0.8;
+}
+#heading-button-menu {
+  display: flex;
+  justify-content: flex-start;
+  margin-left: 50vh;
+}
+#first-heading-button {
+  border-width: 0 1px 0 1px;
 }
 .heading-button {
   padding: 5vh 0 5vh 0;
@@ -91,67 +119,116 @@ button {
   border-width: 0 1px 0 0;
   background-color: rgba(41, 40, 40, 0.4);
 }
+.social-icon {
+  width: 6vh;
+  margin: 30px 27px 0 27px;
+  opacity: 0.7;
+  border-radius: 13px;
+  transition: all 0.3s;
+}
+.social-icon:hover {
+  opacity: 1;
+  box-shadow: 0 0 15px -5px gold;
+}
 
 /* MAIN BODY */
 #main-page-body {
   display: flex;
 }
-#updates {
-  align-items: center;
-  text-align: center;
-  background-color: var(--black2);
-  width: 50vh;
-  border-radius: 10px;
-  margin: 20px 0 0 20px;
-}
 #main-separator {
   height: 80vh;
   padding: 20px 3vh 0 3vh;
 }
+/* UPDATES */
+#updates {
+  align-items: center;
+  text-align: center;
+  background-color: var(--black2);
+  width: 40%;
+  border-radius: 10px;
+  margin: 0 0 0 1%;
+}
+#bsky-feed {
+  margin: 50%;
+}
+/* GAMES */
 .protag {
   max-height: 100vh;
   position: absolute;
+  left: 50vh;
+  top: 10vh;
   z-index: 1;
+  animation: fadeinleft 0.5s;
+}
+@keyframes fadeinleft {
+  0%{
+    transform: translateX(500px);
+    opacity: 0;
+  }
+  100%{
+    transform: translateX(0px);
+    opacity: 1;
+  }
 }
 #game-summary {
   text-align: left;
   background-color: var(--black2);
   border-radius: 10px;
-  width: fit-content;
+  width: 75%;
   position: relative;
   z-index: 2;
-  left: 30vh;
-  top: 12vh;
-}
-#game-low-half {
-  display: flex;
+  left: 24%;
 
+}
+.game-description {
+  display: flex;
+  max-width: 110vh;
+}
+.game-logo {
+width: 40vh;
+height: fit-content;
+margin-top: 5%;
+}
+.screenshot-segment {
+  display: flex;
+  justify-content: center;
 }
 .screenshot {
-  padding: 3vh 6vh;
-  max-width: 80vh;
+  width: 85%;
+  border-radius: 10px;
+  margin: 0 1%;
+}
+.arrow {
+  height: 70px;
+  border: none;
+  margin: 600% 0 0 0;
+  opacity: 0.5;
+  transition: all 0.4s;
+}
+.arrow:hover {
+  opacity: 1;
+}
+.arrow.game-arrow {
+  margin: 40% 0 0 0;
+  padding: 10px;
+  height: 140px;
 }
 #game-links {
-  margin-top: 27px;
+  display: flex;
+  justify-content:space-around;
+  padding: 1% 0;
+  margin-left: 12%;
 }
 .game-button {
-  max-width: 22vh;
-  margin-left: -5vh;
-    transition: all 300ms;
+  width: fit-content;
+  max-width: 30%;
+  padding: 0;
+  margin: 1%;
+  opacity: 0.5;
+    transition: all 100ms;
 }
 .game-button:hover {
-  mix-blend-mode: multiply;
-
-}
-#EVOL-title {
-  margin-left: -20vh;
-}
-#heading-button-menu {
-  display: flex;
-  margin-left: 80vh;
-}
-#first-heading-button {
-  border-width: 0 1px 0 1px;
+  opacity: 1;
 }
 
 
