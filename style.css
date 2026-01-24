@@ -17,8 +17,11 @@ body {
   background-position: center;
   background-blend-mode: soft-light;
 }
-html,script,div,body,button,a,* {
+html,script,div,body {
   cursor: url(images/cursor4.png) , auto;
+}
+button, a {
+  cursor: url(images/cursor 1.png) ,auto;
 }
 
 div {
