@@ -16,11 +16,11 @@ body {
   background-size: cover;
   background-position: center;
   background-blend-mode: soft-light;
-}
-html,script,div,body,button,a,* {
   cursor: url(images/cursor4.png) , auto;
 }
-
+/* html,script,div,body,button,a {
+  cursor: url(images/cursor4.png) , auto;
+} */
 div {
   box-sizing: border-box;
 }
@@ -41,6 +41,7 @@ p {
 a {
   max-width: fit-content;
   max-height: fit-content;
+  cursor: url(images/cursor5.png) , auto;
 }
 button {
   font-family: Caudex;
@@ -50,6 +51,10 @@ button {
   border: none;
   height: fit-content;
   width: fit-content;
+  cursor: url(images/cursor5.png) , auto;
+}
+button:hover {
+ cursor: url(images/cursor5.png) , auto;
 }
 /* HEADING */
 .heading {
@@ -226,9 +231,11 @@ margin-top: 5%;
   margin: 1%;
   opacity: 0.5;
     transition: all 100ms;
+  cursor: url(images/cursor5.png) , auto;
 }
 .game-button:hover {
   opacity: 1;
+  cursor: url(images/cursor5.png) , auto;
 }
 
 
