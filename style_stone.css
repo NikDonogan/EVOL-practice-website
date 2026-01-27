@@ -1,5 +1,5 @@
 /* ROOT */
-@import url("https://fonts.googleapis.com/css2?family=Caudex:ital,wght@0,400;0,700;1,400;1,700&family=Cinzel+Decorative:wght@400;700;900&family=Cinzel:wght@400..900&family=Gideon+Roman&family=Manufacturing+Consent&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Caudex:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 :root {
   --red1: rgb(190, 29, 29);
   --red2: rgb(85, 16, 16);
@@ -14,63 +14,44 @@ body {
   max-width: fit-content;
   background-image: url(images/bg\ \(2\).jpg);
   background-size: cover;
-  background-repeat: no-repeat;
+  background-repeat:no-repeat;
   background-position: center;
   background-blend-mode: soft-light;
   cursor: url(images/cursor/frame_00_delay-0.1s.gif), auto;
 }
 @keyframes cursor {
-  0% {
-    cursor: url(images/cursor/frame_00_delay-0.1s.gif), auto;
-  }
-  10% {
-    cursor: url(images/cursor/frame_01_delay-0.1s.gif), auto;
-  }
-  20% {
-    cursor: url(images/cursor/frame_02_delay-0.1s.gif), auto;
-  }
-  30% {
-    cursor: url(images/cursor/frame_03_delay-0.1s.gif), auto;
-  }
-  40% {
-    cursor: url(images/cursor/frame_04_delay-0.1s.gif), auto;
-  }
-  50% {
-    cursor: url(images/cursor/frame_05_delay-0.1s.gif), auto;
-  }
-  60% {
-    cursor: url(images/cursor/frame_06_delay-0.1s.gif), auto;
-  }
-  70% {
-    cursor: url(images/cursor/frame_07_delay-0.1s.gif), auto;
-  }
-  80% {
-    cursor: url(images/cursor/frame_08_delay-0.1s.gif), auto;
-  }
-  90% {
-    cursor: url(images/cursor/frame_09_delay-0.1s.gif), auto;
-  }
-  100% {
-    cursor: url(images/cursor/frame_10_delay-0.1s.gif), auto;
-  }
+  0% {cursor: url(images/cursor/frame_00_delay-0.1s.gif), auto;}
+  10% {cursor: url(images/cursor/frame_01_delay-0.1s.gif), auto;}
+  20% {cursor: url(images/cursor/frame_02_delay-0.1s.gif), auto;}
+  30% {cursor: url(images/cursor/frame_03_delay-0.1s.gif), auto;}
+  40% {cursor: url(images/cursor/frame_04_delay-0.1s.gif), auto;}
+  50% {cursor: url(images/cursor/frame_05_delay-0.1s.gif), auto;}
+  60% {cursor: url(images/cursor/frame_06_delay-0.1s.gif), auto;}
+  70% {cursor: url(images/cursor/frame_07_delay-0.1s.gif), auto;}
+  80% {cursor: url(images/cursor/frame_08_delay-0.1s.gif), auto;}
+  90% {cursor: url(images/cursor/frame_09_delay-0.1s.gif), auto;}
+  100% {cursor: url(images/cursor/frame_10_delay-0.1s.gif), auto;}
 }
 div {
   box-sizing: border-box;
 }
 h2 {
-  font-family: Cinzel Decorative, serif;
-  font-weight: 400;
+  font-family: Caudex;
   color: var(--red1);
   padding: 1%;
   margin: 0;
   text-shadow: 0 0 10px black;
 }
 p {
-  font-family: Gideon Roman, serif;
+  font-family: Caudex;
   font-size: 18px;
   color: var(--bone1);
   padding: 0 0 0 20px;
   text-shadow: 0 0 0 5px black;
+  border: solid transparent 10px;
+  border-image: url(images/indent\ border.png) round 100;
+  background-color: var(--black2);
+  background-clip: padding-box;
 }
 a {
   max-width: fit-content;
@@ -78,7 +59,7 @@ a {
   cursor: url(images/cursor/frame_00_delay-0.1s.gif), auto;
 }
 button {
-  font-family: Cinzel Decorative, serif;
+  font-family: Caudex;
   font-size: 25px;
   color: var(--red1);
   background-color: transparent;
@@ -93,7 +74,7 @@ button:hover {
 }
 /* HEADING */
 .heading {
-  font-family: Cinzel Decorative, serif;
+  font-family: Caudex;
   font-size: 20px;
   font-weight: 700;
   width: 100%;
@@ -154,7 +135,7 @@ button:hover {
   border-width: 0 1px 0 1px;
 }
 .heading-button {
-  padding: 2.9vh 0 5vh 0;
+  padding: 3.4vh 0 5vh 0;
   border: solid var(--red2);
   border-width: 0 1px 0 0;
   transition: all 300ms;
@@ -169,7 +150,7 @@ button:hover {
 }
 .social-icon {
   width: 6vh;
-  margin: 15px 27px 0 27px;
+  margin: 20px 27px 0 27px;
   opacity: 0.7;
   border-radius: 13px;
   transition: all 0.3s;
@@ -186,7 +167,7 @@ button:hover {
 }
 .section {
   background-color: var(--black2);
-  background-image: url(images/grate.png);
+  background-image: url(images/texture3.png);
   background-repeat: repeat;
   background-size: 100px;
   border: 60px solid transparent;
@@ -208,18 +189,21 @@ button:hover {
   width: 40%;
   border-radius: 10px;
   margin: 0 0 0 1%;
-}
-#bsky-feed {
-  margin: 50%;
+  anchor-name: --bsky;
 }
 #overlay {
   position: absolute;
   z-index: 1;
   /* height: 64.5vh;
   width: 40vh; */
-  width: 20%;
-  height: 65%;
+  width:19.7%;
+  height:64.5%;
   pointer-events: none;
+  mask-clip: --bsky;
+  position-anchor: --bsky;
+  mask-position: --bsky;
+  mask-size: --bsky;
+  mask-origin: --bsky;
 }
 /* GAMES */
 .protag {
@@ -240,7 +224,7 @@ button:hover {
     opacity: 1;
   }
 }
-#game-summary {
+#game-summary{
   position: relative;
   text-align: left;
   z-index: 2;
@@ -253,7 +237,6 @@ button:hover {
 .game-logo {
   width: 30vh;
   height: fit-content;
-  margin-top: 20px;
 }
 .screenshot-segment {
   display: flex;
@@ -263,17 +246,18 @@ button:hover {
   width: 85%;
   border-radius: 10px;
   margin: 0 1%;
+  border: solid transparent 15px;
+  border-image: url(images/indent\ border.png) round 100;
 }
 .arrow {
   height: 70px;
   border: none;
   margin: 500% 0 0 0;
-  transition: all 500ms;
- filter: grayscale(50%);
+  transition: all 0.4s;
+  filter: grayscale(30%);
 }
 .arrow:hover {
   filter: drop-shadow(0 0 10px rgba(218, 165, 32, 0.486));
-  filter: grayscale(0%);
 }
 .arrow.game-arrow {
   margin: 0% 0 0 0;
@@ -292,23 +276,25 @@ button:hover {
   top: 20px;
   justify-content: space-around;
   padding: 1% 0 0 0;
-  margin-left: 12%;
+  margin-left: 12%;  
 }
 .game-button {
   width: fit-content;
   max-width: 30%;
-  transition: all 300ms;
-  padding: 2%;
+  transition: all 3000ms;
+  padding: 2px;
   margin: 0% 1% 0 1%;
   cursor: url(images/cursor/frame_00_delay-0.1s.gif), auto;
   animation: cursor 1000ms infinite;
   filter: grayscale(30%);
+  border: solid transparent 5px;
+  border-image: url(images/indent\ border.png) round 100;
+  background-color: var(--black2);
+  background-clip: padding-box;
 }
 .game-button:hover {
   cursor: url(images/cursor/frame_00_delay-0.1s.gif), auto;
   filter: drop-shadow(0 0 10px rgba(218, 165, 32, 0.486));
-  max-width: 33%;
-  padding: 0;
 }
 /* FOOTING */
 .footing {
@@ -321,11 +307,12 @@ button:hover {
   background-clip: border-box;
   height: 300px;
   margin-top: 30vh;
+
 }
 /* PHONE MEDIA */
 @media (max-width: 430px) {
   .heading {
-    font-family: Caudex, serif;
+    font-family: Caudex;
     font-weight: 700;
     font-size: 15px;
 
