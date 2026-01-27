@@ -184,6 +184,33 @@ button:hover {
   box-shadow: 0 0 15px -5px gold;
   cursor: url(images/cursor/frame_00_delay-0.1s.gif), auto;
 }
+#merchbutton{
+  anchor-name: merch;
+}
+#merchbutton:hover #merchshirt {
+margin: -30px 0px 0 -55px;
+opacity: 1;
+}
+#merchbutton:hover #merchplush {
+margin: -30px 0px 0 -15px;
+opacity: 1;
+}
+#merchshirt {
+  position: absolute;
+  height: 70%; 
+  margin: -20px 0px 0 -100px;
+  transition: all 500ms;
+  pointer-events: none;
+  opacity: 0;
+}
+#merchplush {
+  position: absolute;
+  height: 80%;
+  margin: -20px 0 0 20px;
+  transition: all 500ms;
+  pointer-events: none;
+  opacity: 0;
+}
 /* MAIN BODY */
 #main-page-body {
   display: flex;
