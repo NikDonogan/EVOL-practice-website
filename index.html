@@ -204,7 +204,12 @@
             GAMES
           </button>
           <button class="heading-button">ABOUT</button>
-          <button class="heading-button" id="merchbutton"><img id="merchshirt" src="images/shirt.png">MERCH<img id="merchplush" src="images/plush1.png"></button>
+          <button class="heading-button" id="merchbutton">
+            <img id="merchshirt" src="images/shirt.png" />MERCH<img
+              id="merchplush"
+              src="images/plush1.png"
+            />
+          </button>
           <button class="heading-button">TEAM</button>
           <a href="https://discord.gg/cXcyDHh6Pr" target="_blank"
             ><img class="social-icon" src="images/discord.png"
@@ -217,14 +222,15 @@
     <div id="main-page-body">
       <div class="section" id="updates">
         <h2>UPDATES</h2>
-        <div #bsky-feed>
-          <img id="overlay" src="images/overlay.png" />
+        <div class="bsky-feed">
+          <img class="bsky-feed" id="overlay" src="images/overlay.png" />
           <script
+            id="bsky-widget"
             src="https://blueskytimeline.com/timeline.js"
             async
             data-handle="nik-donogan.bsky.social"
             data-theme="dark"
-            data-width="420"
+            data-width="600"
             data-height="600"
             data-lang="en"
             data-ui="1"
@@ -238,7 +244,7 @@
       <div id="separator">
         <img id="main-separator" src="images/separator.png" />
       </div>
-      <div id="games"> 
+      <div id="games">
         <img class="protag" src="images/game1.png" />
         <div class="section" id="game-summary">
           <div class="game-description">
