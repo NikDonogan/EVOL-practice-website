@@ -1,0 +1,3 @@
+make small arrows switch between screenshots
+make big arrows switch between games
+    -change characters, logo, description and set of screenshots

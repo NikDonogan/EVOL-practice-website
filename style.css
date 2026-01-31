@@ -242,6 +242,7 @@ button:hover {
   text-align: center;
   background-color: var(--black2);
   width: fit-content;
+  max-width: 30%;
   border-radius: 10px;
   margin: 0 0 0 1%;
 }
@@ -251,6 +252,7 @@ button:hover {
   margin: 0%;
   overflow: hidden;
   position: relative;
+  border-right: solid 1px rgb(62, 62, 62);
 }
 #bsky-widget {
   position: absolute;
@@ -288,7 +290,8 @@ button:hover {
   position: relative;
   text-align: left;
   z-index: 2;
-  left: 24%;
+  width: 88%;
+  left: 17%;
 }
 .game-description {
   display: flex;
@@ -302,22 +305,60 @@ button:hover {
 .screenshot-segment {
   display: flex;
   justify-content: center;
+  z-index: 9;
+}
+.carousel {
+  width: 82%;
+  aspect-ratio: 16/9;
+  margin: 0 1%;
+  position: relative;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.carousel > ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 .screenshot {
-  width: 85%;
+  width: 100%;
   border-radius: 10px;
-  margin: 0 1%;
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: all 500ms;
+}
+.screenshot > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.screenshot[data-active] {
+  opacity: 1;
 }
 .arrow {
+  position: relative;
+  z-index: 9;
   height: 70px;
   border: none;
-  margin: 500% 0 0 0;
+  margin: -3% 0 0 0;
   transition: all 500ms;
   filter: grayscale(50%);
 }
 .arrow:hover {
   filter: drop-shadow(0 0 10px rgba(218, 165, 32, 0.486));
   filter: grayscale(0%);
+}
+#next-scr {
+  position: absolute;
+  left: 101%;
+}
+#prev-scr {
+  position: absolute;
+  left: -5%;
 }
 .arrow.game-arrow {
   margin: 0% 0 0 0;
