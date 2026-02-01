@@ -256,7 +256,6 @@ button:hover {
 }
 #bsky-widget {
   position: absolute;
-  height: 100%;
   min-height: 100%;
   background-color: black;
 }
@@ -354,11 +353,13 @@ button:hover {
 }
 #next-scr {
   position: absolute;
-  left: 101%;
+  left: 100%;
+  padding: 10px;
 }
 #prev-scr {
   position: absolute;
-  left: -5%;
+  left: -7%;
+  padding: 10px;
 }
 .arrow.game-arrow {
   margin: 0% 0 0 0;
