@@ -73,8 +73,7 @@ p {
     serif;
   font-size: 18px;
   color: var(--bone1);
-  padding: 0 0 0 20px;
-  text-shadow: 0 0 0 5px black;
+  margin: 0;
 }
 a {
   max-width: fit-content;
@@ -228,7 +227,6 @@ button:hover {
   border: 60px solid transparent;
   border-image: url(images/border1.png) 125 round;
   border-image-outset: 14px;
-  border-radius: 20px;
   width: 75%;
   background-clip: border-box;
 }
@@ -243,8 +241,13 @@ button:hover {
   background-color: var(--black2);
   width: fit-content;
   max-width: 30%;
+  height: fit-content;
   border-radius: 10px;
   margin: 0 0 0 1%;
+}
+
+#updates > h2 {
+  margin-top: -10%;
 }
 .bsky-feed {
   width: 100%;
@@ -254,6 +257,7 @@ button:hover {
   position: relative;
   border-right: solid 1px rgb(62, 62, 62);
 }
+
 #bsky-widget {
   position: absolute;
   min-height: 100%;
@@ -268,38 +272,53 @@ button:hover {
 }
 /* GAMES */
 .protag {
-  max-height: 100vh;
+  height: 100vh;
   position: absolute;
-  left: 50vh;
-  top: 10vh;
-  z-index: 1;
-  animation: fadeinleft 0.5s;
+  z-index: 0;
+  opacity: 0;
+  width: fit-content;
+  overflow-x: hidden;
 }
-@keyframes fadeinleft {
-  0% {
-    transform: translateX(500px);
-    opacity: 0;
-  }
-  100% {
-    transform: translateX(0px);
-    opacity: 1;
-  }
+.protag > img {
+  left: 40vh;
+  top: -8vh;
+  height: 100vh;
+  transform: translateX(0%);
+  position: absolute;
+  transition: all 500ms;
+}
+.protag[data-active] {
+  opacity: 1;
+  transform: translateX(-60vh);
+  transition: all 500ms;
+  overflow-x: visible;
 }
 #game-summary {
   position: relative;
   text-align: left;
   z-index: 2;
-  width: 88%;
-  left: 17%;
+  width: 90%;
+  left: 19%;
+  top: -4%;
 }
 .game-description {
   display: flex;
   max-width: 110vh;
+  max-height: 15vh;
+  position: relative;
+  padding-bottom: 10px;
+  margin: -20px 0 0 10px;
+}
+.game-text {
+  z-index: 3;
+  position: absolute;
 }
 .game-logo {
-  width: 30vh;
+  width: 40vh;
+  position: relative;
+  margin: -30px 0 0 -5vh;
+  right: 10px;
   height: fit-content;
-  margin-top: 20px;
 }
 .screenshot-segment {
   display: flex;
@@ -307,7 +326,7 @@ button:hover {
   z-index: 9;
 }
 .carousel {
-  width: 82%;
+  width: 91%;
   aspect-ratio: 16/9;
   margin: 0 1%;
   position: relative;
@@ -323,7 +342,6 @@ button:hover {
 }
 .screenshot {
   width: 100%;
-  border-radius: 10px;
   position: absolute;
   inset: 0;
   opacity: 0;
@@ -334,12 +352,13 @@ button:hover {
   height: 100%;
   object-fit: cover;
   display: block;
+  border: solid 1px var(--gray1);
 }
 .screenshot[data-active] {
   opacity: 1;
 }
 .arrow {
-  position: relative;
+  position: absolute;
   z-index: 9;
   height: 70px;
   border: none;
@@ -359,12 +378,20 @@ button:hover {
 #prev-scr {
   position: absolute;
   left: -7%;
-  padding: 10px;
+  padding: 16px;
 }
 .arrow.game-arrow {
-  margin: 0% 0 0 0;
+  margin: 625px 0 0 0;
   padding: 10px;
-  height: 140px;
+  height: 112px;
+}
+.game-arrow.right-arrow {
+  position: absolute;
+  left: 94%;
+}
+.game-arrow.left-arrow {
+  position: absolute;
+  left: 45%;
 }
 .right-arrow:hover {
   transform: translateX(10px);
@@ -399,14 +426,14 @@ button:hover {
 /* FOOTING */
 .footing {
   background-color: var(--black1);
-  width: 101%;
-  position: relative;
-  margin: 0 0 -15px -10px;
+  width: 100%;
+  position: absolute;
+  margin: 0 0 0vh -10px;
   border-top: solid 1px goldenrod;
   box-sizing: border-box;
-  background-clip: border-box;
   height: 300px;
   margin-top: 30vh;
+  top: 140vh;
 }
 /* PHONE MEDIA */
 @media (max-width: 430px) {
